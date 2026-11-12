@@ -4,52 +4,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Crush ❤️</title>
+<title>For Ju ❤️</title>
 <style>
+* {box-sizing:border-box}
 body {
-  background: linear-gradient(135deg,#ffd1dc,#ff9aaf);
-  font-family: sans-serif;
-  text-align: center;
-  padding: 50px 15px;
-  color: #8b2445;
+  margin:0;
+  padding:25px 14px;
+  background:linear-gradient(135deg,#ffd1dc,#ff9aaf);
+  font-family:sans-serif;
+  color:#8b2445;
+  text-align:center;
 }
 .card {
-  background: white;
-  padding: 30px 20px;
-  border-radius: 25px;
-  max-width: 350px;
-  margin: auto;
-  box-shadow: 0 8px 25px #d66a8a55;
+  background:white;
+  max-width:420px;
+  margin:25px auto;
+  padding:25px 20px;
+  border-radius:25px;
+  box-shadow:0 8px 30px #a33b6050;
+}
+h1 {color:#e84375}
+h2 {color:#e84375}
+p {
+  line-height:2;
+  font-size:16px;
 }
 button {
-  background: #ff5c8a;
-  color: white;
-  border: none;
-  padding: 14px 25px;
-  border-radius: 30px;
-  font-size: 17px;
+  background:#ff5c8a;
+  color:white;
+  border:0;
+  padding:13px 24px;
+  border-radius:30px;
+  font-size:16px;
+  margin:8px;
 }
-#letter { display: none; }
+input {
+  padding:13px;
+  border:2px solid pink;
+  border-radius:12px;
+  width:85%;
+  font-size:16px;
+  text-align:center;
+}
+#passwordBox,#letter {display:none}
+.heart {font-size:35px}
 </style>
 </head>
 <body>
+
 <div class="card">
-  <h1>❤️ Hello CRUSH ❤️</h1>
-  <p>ဂျူး အတွက် Surprise လေးတစ်ခုရှိတယ်</p>
-  <h1>💌</h1>
-  <button onclick="openLetter()">Open My Letter</button>
+  <div class="heart">💗 🎁 💗</div>
+  <h1>Hello ဂျူး ❤️</h1>
+  <p>ဂျူးအတွက် Surprise လေးတစ်ခုရှိတယ်။</p>
+  <p>ဒီလက်ဆောင်လေးကို ဖွင့်ကြည့်ပေးပါနော်။</p>
+  <button onclick="showPassword()">Open Gift 🎁</button>
+
+  <div id="passwordBox">
+    <h2>🔐 Secret Password</h2>
+    <p>ကိုယ်ပေးထားတဲ့ Password လေးထည့်ပါ။</p>
+    <input id="pass" type="password"
+    placeholder="Enter Password">
+    <br>
+    <button onclick="checkPassword()">Unlock ❤️</button>
+    <p id="error"></p>
+  </div>
+
   <div id="letter">
-    <h2>For You ❤️</h2>
-    <p>ဂျူး ကိုတွေ့ပြီးနောက်ပိုင်း
-    နေ့ရက်လေးတွေက ပိုပြီးလှပလာတယ်။</p>
-    <p>ဂျူးပြုံးနေတာလေးကို မြင်ရရင်
-    ကျ​​ေနာ်လည်း ပျော်ရွှင်မိတယ်။</p>
-    <h2>💕 You Are Special 💕</h2>
+    <div class="heart">💌</div>
+    <h1>For You, Ju ❤️</h1>
+
+    <p>ဂျူးရေ...</p>
+
+    <p>
+    တစ်ခါတလေ လူတစ်ယောက်ကို တွေ့လိုက်ရုံနဲ့
+    ကိုယ့်ရဲ့နေ့ရက်လေးတွေ ပိုပြီးလှပလာတတ်တယ်။
+    ကိုယ့်အတွက်တော့ အဲဒီလူလေးက ဂျူးပါပဲ။
+    </p>
+
+    <p>
+    မင်းရဲ့အပြုံးလေးကို မြင်ရတဲ့အခါ
+    ကိုယ်လည်း အလိုလိုပျော်ရွှင်မိတယ်။
+    မင်းနဲ့ စကားပြောရတဲ့အချိန်လေးတွေကလည်း
+    ကိုယ့်အတွက် အမှတ်တရလေးတွေပါ။
+    </p>
+
+    <p>
+    ဂျူးကို သဘောကျမိတာက
+    အကြောင်းပြချက်တစ်ခုတည်းကြောင့် မဟုတ်ပါဘူး။
+    မင်းရဲ့ပုံစံလေး၊ အပြုံးလေးနဲ့
+    မင်းရဲ့ရှိနေမှုလေးကို သဘောကျမိတာပါ။
+    </p>
+
+    <p>
+    ကိုယ်ဟာ ပြည့်စုံတဲ့လူတစ်ယောက်တော့
+    မဟုတ်နိုင်ပါဘူး။
+    ဒါပေမဲ့ မင်းကို လေးစားတန်ဖိုးထားပြီး
+    စိတ်ရင်းမှန်နဲ့ ဆက်ဆံချင်ပါတယ်။
+    </p>
+
+    <p>
+    မင်းပျော်ရွှင်နေဖို့၊ အိပ်မက်တွေ အောင်မြင်ဖို့
+    အမြဲဆုတောင်းပေးနေမယ်။
+    မင်းရဲ့နေ့ရက်တိုင်းမှာ ပျော်ရွှင်မှုတွေ
+    အများကြီးရှိပါစေ။
+    </p>
+
+    <h2>💕 One More Thing 💕</h2>
+
+    <p>
+    ဂျူးရေ... ကိုယ်မင်းကို သဘောကျနေမိပြီ။
+    မင်းရဲ့အဖြေကိုလည်း အလျင်မလိုပါဘူး။
+    မင်းရဲ့ခံစားချက်ကို လေးစားပါတယ်။
+    </p>
+
+    <h1>❤️ You Are Special ❤️</h1>
+    <div class="heart">🌷 💗 🌷</div>
+    <p>With Love, From Me ❤️</p>
   </div>
 </div>
+
 <script>
-function openLetter() {
-  document.getElementById("letter").style.display = "block";
+function showPassword() {
+  document.getElementById("passwordBox").style.display="block";
+}
+
+function checkPassword() {
+  let p=document.getElementById("pass").value;
+
+  if(p==="july nyein") {
+    document.getElementById("passwordBox").style.display="none";
+    document.getElementById("letter").style.display="block";
+  } else {
+    document.getElementById("error").innerText=
+    "Password မမှန်သေးဘူးနော် 💗";
+  }
 }
 </script>
 </body>
