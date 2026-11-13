@@ -126,12 +126,10 @@ input {
 <button onclick="yesLove()">ချစ်တယ် ❤️</button>
 
 <button id="noBtn"
-onclick="moveNo()"
 onmouseover="moveNo()"
-ontouchstart="moveNo()">
+ontouchstart="moveNo(event)">
 မချစ်ဘူး 💔
 </button>
-
 <p id="answer"></p>
 
 
@@ -144,7 +142,8 @@ ontouchstart="moveNo()">
 <script>function yesLove() {
   document.getElementById("answer").innerHTML =
   "ချစ်တယ်လို့ ဖြေပြီးပြီနော် ❤️ ညကျရင် ကိုယ့်ကို အာဘွား ၁၀၀ ပေးရမယ်နော် 😘💋 မမေ့နဲ့ဦး ဂျူးရေ 🥰";
-function moveNo() {
+}
+  function moveNo() {
     let btn = document.getElementById("noBtn");
     let answer = document.getElementById("answer");
 
