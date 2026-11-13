@@ -144,7 +144,7 @@ ontouchstart="moveNo()">
 <script>function yesLove() {
   document.getElementById("answer").innerHTML =
   "ချစ်တယ်လို့ ဖြေပြီးပြီနော် ❤️ ညကျရင် ကိုယ့်ကို အာဘွား ၁၀၀ ပေးရမယ်နော် 😘💋 မမေ့နဲ့ဦး ဂျူးရေ 🥰";
-}function moveNo() {
+function moveNo() {
     let btn = document.getElementById("noBtn");
     let answer = document.getElementById("answer");
 
@@ -152,8 +152,11 @@ ontouchstart="moveNo()">
 
     btn.style.position = "fixed";
 
-    let x = Math.random() * (window.innerWidth - btn.offsetWidth);
-    let y = Math.random() * (window.innerHeight - btn.offsetHeight);
+    let maxX = window.innerWidth - btn.offsetWidth;
+    let maxY = window.innerHeight - btn.offsetHeight;
+
+    let x = Math.random() * Math.max(0, maxX);
+    let y = Math.random() * Math.max(0, maxY);
 
     btn.style.left = x + "px";
     btn.style.top = y + "px";
