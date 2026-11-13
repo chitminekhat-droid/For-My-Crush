@@ -125,25 +125,22 @@ input {
 
 <button onclick="yesLove()">ချစ်တယ် ❤️</button>
 
-<button onclick="noLove()">မချစ်ဘူး 💔</button>
+<button id="noBtn" onmouseover="moveNo()"
+ontouchstart="moveNo()">မချစ်ဘူး 💔</button>
 
 <p id="answer"></p>
-function yesLove() {
-  document.getElementById("answer").innerHTML =
-  "ကိုယ်လည်း ဂျူးကို အရမ်းချစ်တယ် ❤️🥰";
-}
 
-function noLove() {
-  document.getElementById("answer").innerHTML =
-  "အဖြေမှားနေပါတယ် 😜 ပြန်ဖြေပါဦး ❤️";
-}
+
     <h1>❤️ You Are Special ❤️</h1>
     <div class="heart">🌷 💗 🌷</div>
     <p>With Love, From Me ❤️</p>
   </div>
 </div>
 
-<script>
+<script>function yesLove() {
+  document.getElementById("answer").innerHTML =
+  "ချစ်တယ်လို့ ဖြေပြီးပြီနော် ❤️ ညကျရင် ကိုယ့်ကို အာဘွား ၁၀၀ ပေးရမယ်နော် 😘💋 မမေ့နဲ့ဦး ဂျူးရေ 🥰";
+}
 function showPassword() {
   document.getElementById("passwordBox").style.display="block";
 }
